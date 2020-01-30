@@ -1,0 +1,12 @@
+<% form_for object do |t|%>
+    <%= t.label :title%>
+    <%= t.text_field :title%>
+    <%t.fields_for :ingredients do |i|%>
+        <%=i.label :name %>
+        <%=i.text_field :name%>
+        <%= i.label :quatity%>
+        <%= i.text_field :quantity %>
+    <%end%>
+    <%= t.submit%>
+
+<%end%>
